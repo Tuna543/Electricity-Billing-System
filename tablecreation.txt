@@ -1,0 +1,25 @@
+drop table customers;
+--drop table account;
+--drop table invoice;
+--drop table electricity_board;
+drop table bill;
+
+
+--LAB 01:
+
+CREATE TABLE CUSTOMERS(
+    CUSTOMER_ID INTEGER PRIMARY KEY,
+    CUSTOMER_NAME VARCHAR2(20),
+    EMAIL VARCHAR2(20),
+    PASSWORD VARCHAR2(10) unique, --lab 03 (using unique key constraints)
+    ADDRESS VARCHAR2(20)
+);
+
+
+CREATE TABLE BILL(
+    BILL_ID INTEGER PRIMARY KEY,
+    AMOUNT INTEGER(10,2),
+    STATUS VARCHAR(20),
+    CUSTOMER_ID INTEGER NOT NULL unique, --lab 03 (using unique key constraints)
+);
+

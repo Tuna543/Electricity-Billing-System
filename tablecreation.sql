@@ -1,0 +1,65 @@
+drop table customers;
+drop table bill;
+
+
+--LAB 01:
+
+CREATE TABLE CUSTOMERS(
+    CUSTOMER_ID INTEGER PRIMARY KEY,
+    CUSTOMER_NAME VARCHAR(100),
+    EMAIL VARCHAR(100) unique, --lab 03 (using unique key constraints)
+    PASSWORD VARCHAR(100),
+    ADDRESS VARCHAR(100)
+);
+
+
+CREATE TABLE BILL(
+    BILL_ID INTEGER PRIMARY KEY,
+    AMOUNT INTEGER,
+    STATUS VARCHAR(100),
+    CUSTOMER_ID INTEGER NOT NULL unique --lab 03 (using unique key constraints)
+);
+
+----------------------------------------------------------------
+--lab 03
+ALTER TABLE CUSTOMERS ADD CONSTRAINT pk_customers
+PRIMARY KEY (customer_id);
+ALTER TABLE bill ADD CONSTRAINT pk_bill
+PRIMARY KEY (bill_id);
+ALTER TABLE bill ADD CONSTRAINT fk_bill
+FOREIGN KEY (CUSTOMER_ID) REFERENCES customers(CUSTOMER_ID);
+----------------------------------------------------------------
+
+
+--inserting data into customers table
+INSERT INTO CUSTOMERS (CUSTOMER_ID, CUSTOMER_NAME, EMAIL, PASSWORD, ADDRESS) VALUES (1, 'Ameen Khan', 'ameenkhan07@gmail.com', 'qwerty', 'Jamia nagar');
+INSERT INTO CUSTOMERS (CUSTOMER_ID, CUSTOMER_NAME, EMAIL, PASSWORD, ADDRESS) VALUES (2, 'Abhishek Bhatnagar', 'abhishek@gmail.com', 'qwerty', 'Ghaziabad');
+INSERT INTO CUSTOMERS (CUSTOMER_ID, CUSTOMER_NAME, EMAIL, PASSWORD, ADDRESS) VALUES (3, 'Anzal', 'anzal@gmail.com', 'qwerty', 'Batla House');
+INSERT INTO CUSTOMERS (CUSTOMER_ID, CUSTOMER_NAME, EMAIL, PASSWORD, ADDRESS) VALUES (4, 'Manaf', 'manaf@gmail.com', 'qwerty', 'Shaheen Bagh');
+INSERT INTO CUSTOMERS (CUSTOMER_ID, CUSTOMER_NAME, EMAIL, PASSWORD, ADDRESS) VALUES (5, 'abc', 'abc@gmail.com', 'qwerty', 'Jamia');
+INSERT INTO CUSTOMERS (CUSTOMER_ID, CUSTOMER_NAME, EMAIL, PASSWORD, ADDRESS) VALUES (6, 'xyz', 'xyz@gmail.com','qwerty', 'Dwarka');
+INSERT INTO CUSTOMERS (CUSTOMER_ID, CUSTOMER_NAME, EMAIL, PASSWORD, ADDRESS) VALUES (7, 'akshit', 'akshit@gmail.com', 'qwerty', 'Dhaka');
+INSERT INTO CUSTOMERS (CUSTOMER_ID, CUSTOMER_NAME, EMAIL, PASSWORD, ADDRESS) VALUES (8, 'akshita', 'akshita@gmail.com', 'qwerty', 'qwe');
+INSERT INTO CUSTOMERS (CUSTOMER_ID, CUSTOMER_NAME, EMAIL, PASSWORD, ADDRESS) VALUES (9, 'nakshit', 'nakshit@gmail.com', 'qwerty', 'California');
+INSERT INTO CUSTOMERS (CUSTOMER_ID, CUSTOMER_NAME, EMAIL, PASSWORD, ADDRESS) VALUES (10, 'shita', 'shita@gmail.com', 'qwerty', 'New Mexico');
+
+--inserting data into bill table
+INSERT INTO BILL (BILL_ID, AMOUNT, STATUS, CUSTOMER_ID) VALUES (101, 1000, 'PAID', 1);
+INSERT INTO BILL (BILL_ID, AMOUNT, STATUS, CUSTOMER_ID) VALUES (102, 2000, 'PAID', 2);
+INSERT INTO BILL (BILL_ID, AMOUNT, STATUS, CUSTOMER_ID) VALUES (103, 3000, 'NOT PAID', 3);
+INSERT INTO BILL (BILL_ID, AMOUNT, STATUS, CUSTOMER_ID) VALUES (104, 4000, 'PAID', 4);
+INSERT INTO BILL (BILL_ID, AMOUNT, STATUS, CUSTOMER_ID) VALUES (105, 5000, 'NOT PAID', 5);
+INSERT INTO BILL (BILL_ID, AMOUNT, STATUS, CUSTOMER_ID) VALUES (106, 6000, 'NOT PAID', 6);
+INSERT INTO BILL (BILL_ID, AMOUNT, STATUS, CUSTOMER_ID) VALUES (107, 7000, 'PAID', 7);
+INSERT INTO BILL (BILL_ID, AMOUNT, STATUS, CUSTOMER_ID) VALUES (108, 8000, 'NOT PAID', 8);
+INSERT INTO BILL (BILL_ID, AMOUNT, STATUS, CUSTOMER_ID) VALUES (109, 9000, 'PAID', 9);
+INSERT INTO BILL (BILL_ID, AMOUNT, STATUS, CUSTOMER_ID) VALUES (110, 1100, 'NOT PAID', 10);
+
+
+--describes table structure
+desc customers;
+desc bill;
+
+--lab 2 & 3
+select * from customers;
+select * from bill;
