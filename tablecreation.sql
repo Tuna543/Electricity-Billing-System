@@ -35,12 +35,6 @@ CREATE TABLE transactions(
   BILL_ID INTEGER NOT NULL unique
 );
 
---DESCRIBING tables
-DESCRIBE TABLE CUSTOMERS;
-DESCRIBE TABLE BILL;
-DESCRIBE TABLE BOARD;
-DESCRIBE TABLE TRANSACTIONS;
-
 --inserting data into customers table
 INSERT INTO CUSTOMERS (CUST_ID, C_NAME, EMAIL, PASS, ADDRESS) VALUES (1, 'Ameen Khan', 'ameenkhan07@gmail.com', 'qwerty', 'Jamia nagar');
 INSERT INTO CUSTOMERS (CUST_ID, C_NAME, EMAIL, PASS, ADDRESS) VALUES (2, 'Abhishek Bhatnagar', 'abhishek@gmail.com', 'qwerty', 'Ghaziabad');
