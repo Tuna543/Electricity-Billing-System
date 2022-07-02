@@ -51,7 +51,7 @@ INSERT INTO CUSTOMERS (CUST_ID, C_NAME, EMAIL, PASS, ADDRESS) VALUES (2, 'Abhish
 INSERT INTO CUSTOMERS (CUST_ID, C_NAME, EMAIL, PASS, ADDRESS) VALUES (3, 'Anzal', 'anzal@gmail.com', 'qwerty', 'Batla House');
 INSERT INTO CUSTOMERS (CUST_ID, C_NAME, EMAIL, PASS, ADDRESS) VALUES (4, 'Manaf', 'manaf@gmail.com', 'qwerty', 'Shaheen Bagh');
 INSERT INTO CUSTOMERS (CUST_ID, C_NAME, EMAIL, PASS, ADDRESS) VALUES (5, 'abc', 'abc@gmail.com', 'qwerty', 'Jamia');
-INSERT INTO CUSTOMERS (CUST_ID, C_NAME, EMAIL, PASS, ADDRESS) VALUES (6, 'xyz', 'xyz@gmail.com','qwerty', 'Dwarka');
+INSERT INTO CUSTOMERS (CUST_ID, C_NAME, EMAIL, PASS, ADDRESS) VALUES (6, 'xyz', 'xyz@gmail.com','qwerty', 'Dhaka');
 INSERT INTO CUSTOMERS (CUST_ID, C_NAME, EMAIL, PASS, ADDRESS) VALUES (7, 'akshit', 'akshit@gmail.com', 'qwerty', 'Dhaka');
 INSERT INTO CUSTOMERS (CUST_ID, C_NAME, EMAIL, PASS, ADDRESS) VALUES (8, 'akshita', 'akshita@gmail.com', 'qwerty', 'qwe');
 INSERT INTO CUSTOMERS (CUST_ID, C_NAME, EMAIL, PASS, ADDRESS) VALUES (9, 'nakshit', 'nakshit@gmail.com', 'qwerty', 'California');
