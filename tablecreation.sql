@@ -41,7 +41,8 @@ CREATE TABLE COMPLAINT(
   CUST_ID INTEGER NOT NULL,
   BOARD_ID INTEGER,
   COM VARCHAR(100) NOT NULL,
-  STAT VARCHAR(100) NOT NULL
+  STAT VARCHAR(100) NOT NULL,
+  FOREIGN KEY (CUST_ID) references CUSTOMERS(CUST_ID)
 );
 --------------------------------------------------
 --inserting data into CUSTOMERS table
