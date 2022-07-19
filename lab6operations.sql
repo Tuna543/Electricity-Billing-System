@@ -16,4 +16,18 @@ USING (CUST_ID) WHERE B.STAT='NOT PAID' AND CM.COM LIKE '%BILL%');
 SELECT CM.COM,C.C_NAME
 FROM CUSTOMERS C CROSS JOIN COMPLAINT CM;
 
---MAX BILL AMOUNT AND ITS CUSTOMER NAME WHICH HASN'T BEEN PAID USING SELF JOIN
+-- CROSS JOIN
+select * from CUSTOMERS cross join BILL;
+
+--left outer join
+select CUST_ID,C.C_NAME,B.AMOUNT from CUSTOMERS C left outer join BILL B
+using(CUST_ID);
+
+--FULL outer join
+select CUST_ID,C.C_NAME,B.AMOUNT from CUSTOMERS C full outer join BILL B
+using(CUST_ID);
+
+--Self Join
+--(max category no.)
+select B.AMOUNT from BILL B MINUS
+select B.AMOUNT from BILL B join BILL C on B.AMOUNT<C.AMOUNT;
